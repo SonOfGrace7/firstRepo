@@ -49,13 +49,13 @@ console.log(myKids);
 
 
 
-const myArr = [
-    [1, 2],
-    [3, 4],
-    [5, 6],
-];
-const newArr = myArr.flat();
-console.log(newArr);
+// c//onst myArr = [
+//     [1, 2],
+//     [3, 4],
+//     [5, 6],
+// //];
+// c//onst newArr = myArr.flat();
+// //console.log(newArr);
 
 
 fruits = ["Banana", "Orange", "Apple","Mangonn"];
@@ -63,3 +63,68 @@ let myfruit =fruits.slice(1, 4 );
 console.log(fruits);
 console.log(myfruit)
 
+// fruits.sort()
+//console.log(fruits)
+
+let sorted = fruits.toSorted();
+console.log(sorted)
+
+const points = [40, 100, 1, 5, 25, 10];
+// points.sort((a, b) => a - b); for ascending order call back 
+// points.sort((a, b) => b - a); for descending order
+points.sort((a, b) => a - b);
+console.log(points.at(-2));
+console.log(Math.max.apply(null, points));
+
+cars = [
+    { type: "Volvo", year: 2016},
+    { type: "Saab", year: 2001},
+    { type: "BNW", year: 2010},
+];
+ 
+cars.sort((a, b) => a - b);
+console.log(cars);
+
+ let changed = []
+points.forEach((x, inx, arr) => {
+    changed.push((x + 20));
+});
+
+// console.log(changed); 
+
+// points.map((x, idx, arr) => {
+//    changed.push((x += idx));
+// });
+
+console.log(changed);
+const myArr = [1, 2, 3, 4, 5, 6];
+const newArr = myArr.flatMap((x) => x * 2);
+console.log(newArr);
+
+let point1 = [40, 100, 1, 5, 25, 10];
+
+let lessNum = point1.filter((x) => x > 25);
+console.log(lessNum);
+
+let finalResult = point1.reduce((result, value) => result + value);
+
+let bool = point1.some((value) => value > 50);
+
+console.log(bool);
+
+
+let strings = "ada, obi, nneka, ekene";
+
+let names = Array.from(strings);
+
+const keys = point1.keys();
+console.log(keys);
+
+const q1 = ["Jan", "Feb", "Mar"];
+const q2 = ["Apr", "May", "Jun"];
+const q3 = ["Jul", "Aug", "Sep"];
+const q4 = ["Oct", "Nov", "May"];
+
+const year = [...q1, ...q2, ...q3, ...q4];
+console.log([year]);
+console.log([...q1, "ap", "may"]);
